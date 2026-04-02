@@ -5,8 +5,8 @@ server/node_modules/
 
 # Environment variables (IMPORTANT)
 .env
-client/.env
-server/.env
+frontend/.env
+backend/.env
 
 # Logs
 logs/
