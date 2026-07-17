@@ -1,0 +1,124 @@
+.symptom-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  height: 100%;
+}
+
+.symptom-input-panel, .symptom-results-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.panel-header h3 {
+  font-family: 'Cinzel', serif;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.helper-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.symptom-input {
+  flex-grow: 1;
+  background: rgba(10, 5, 20, 0.4);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  color: var(--text-primary);
+  border-radius: 16px;
+  padding: 1.5rem;
+  font-family: inherit;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  resize: vertical;
+  min-height: 220px;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.symptom-input:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+  background: rgba(15, 10, 30, 0.6);
+  box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 215, 0, 0.15);
+}
+
+.symptom-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-style: italic;
+}
+
+.analyze-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, var(--accent-pink) 0%, #ff0f5e 100%);
+  border-radius: 12px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(255, 0, 85, 0.3);
+  text-transform: uppercase;
+}
+
+.analyze-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255, 0, 85, 0.5);
+  background: linear-gradient(135deg, #ff1a6b 0%, #e60050 100%);
+}
+
+.analyze-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.disclaimer-alert {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  background: linear-gradient(90deg, rgba(255, 23, 68, 0.15) 0%, rgba(255, 23, 68, 0.05) 100%);
+  border-left: 5px solid #ff1744;
+  padding: 1.2rem;
+  border-radius: 4px 12px 12px 4px;
+  backdrop-filter: blur(5px);
+}
+
+.disclaimer-alert p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ffc2c2;
+  line-height: 1.5;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

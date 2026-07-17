@@ -89,7 +89,7 @@ const Analytics = ({ token }) => {
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
-                <Tooltip contentStyle={{background: '#1a0b2e', border:'1px solid #ffd700', borderRadius: '8px'}}/>
+                <Tooltip contentStyle={{background: 'rgba(20, 10, 40, 0.9)', border: '1px solid rgba(255, 215, 0, 0.3)', borderRadius: '8px', color: '#fff'}}/>
               </PieChart>
             </ResponsiveContainer>
           </div>

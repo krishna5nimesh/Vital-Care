@@ -12,6 +12,8 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/medications', require('./routes/medications'));
 app.use('/api/ai', require('./routes/ai'));
+app.use('/api/appointments', require('./routes/appointments'));
+app.use('/api/symptoms', require('./routes/symptoms'));
 
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/alchemists-grimoire';
